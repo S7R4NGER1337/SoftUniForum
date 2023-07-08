@@ -1,3 +1,5 @@
+import { Post } from "./post";
+
 export interface UserId {
   themes: string[];
   posts: string[];
@@ -13,7 +15,7 @@ export interface UserId {
 
 export interface Theme {
   subscribers: string[];
-  posts: string[];
+  posts: any;
   _id: string;
   themeName: string;
   userId: UserId;
