@@ -6,11 +6,15 @@
       <div class="theme-title">
         <div class="theme-name-wrapper">
           <div class="theme-name">
-            <h2>{{ theme.themeName}}</h2>
-            <p>Date: <time>{{theme.created_at}}</time></p>
+            <h2>{{ theme.themeName }}</h2>
+            <p>
+              Date: <time>{{ theme.created_at }}</time>
+            </p>
           </div>
           <div class="subscribers">
-            <p>Subscribers: <span>{{theme.subscribers.length}}</span></p>
+            <p>
+              Subscribers: <span>{{ theme.subscribers.length }}</span>
+            </p>
             <!-- <button class="subscribe">Subscribe</button>
                         <button class="unsubscribe">Unsubscribe</button> -->
           </div>
@@ -20,7 +24,10 @@
       <!-- comment  -->
       <div class="comment" *ngFor="let post of theme.posts">
         <header class="header">
-          <p><span>{{post.userId.username}}</span> posted on <time>{{post.created_at}}</time></p>
+          <p>
+            <span>{{ post.userId.username }}</span> posted on
+            <time>{{ post.created_at }}</time>
+          </p>
         </header>
         <div class="comment-main">
           <div class="userdetails">
@@ -28,18 +35,20 @@
           </div>
           <div class="post-content">
             <p>
-              {{post.text}}
+              {{ post.text }}
             </p>
           </div>
         </div>
         <div class="footer">
           <!-- <i class="fas fa-thumbs-up"></i>
                     <i class="fas fa-thumbs-down"></i> -->
-          <p><span>{{post.likes.length}}</span> likes</p>
+          <p>
+            <span>{{ post.likes.length }}</span> likes
+          </p>
         </div>
       </div>
-      
-      <div class="answer-comment">
+
+      <div class="answer-comment" *ngIf="isLoged">
         <p><span>currentUser</span> comment:</p>
         <div class="answer">
           <form>
