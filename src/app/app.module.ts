@@ -27,12 +27,12 @@ import { AppErrorComponent } from './app-error/app-error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     HttpClientModule,
     SharedModule,
     UserModule,
     ThemeModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
